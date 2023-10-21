@@ -1,0 +1,103 @@
+.product-list {
+    padding: 0px 15px;
+}
+
+.product-rlist {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+    gap: 20px;
+    scroll-behavior: smooth;
+}
+
+.product-rlist::-webkit-scrollbar {
+    display: none;
+}
+
+.item-details {
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+.product-rlist .item-details img {
+    height: 350px;
+}
+
+.item-desc {
+    position: relative;
+    top: -20px;
+    text-align: center;
+    background-color: white;
+}
+
+.item-desc h3 {
+    font-size: 28px;
+}
+
+.item-desc h1 {
+    font-size: 25px;
+    color: #e7ac3f;
+}
+
+.item-details ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    position: relative;
+    left: 0;
+    bottom: 30px;
+    text-align: center;
+    width: 100%;
+    z-index: -1;
+    transition: all 0.3s ease-in-out;
+}
+
+.item-details .w-icon,
+.quick-view {
+    background-color: white;
+    padding: 10px 15px;
+}
+
+.product-rlist .item-details:hover ul {
+    bottom: 48px;
+    z-index: 5;
+}
+
+.product-cont {
+    position: relative;
+}
+
+.scroll-button {
+    position: absolute;
+    top: 42%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.fa-chevron-left {
+    left: 0;
+}
+
+.fa-chevron-right {
+    right: 0;
+}
+
+@media (max-width: 991px) {
+    .scroll-button {
+        position: relative;
+        top: auto;
+    }
+
+    .scroll-btn {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        bottom: 280px;
+    }
+}
